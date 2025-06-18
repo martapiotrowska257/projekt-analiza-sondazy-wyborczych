@@ -7,7 +7,7 @@ folder_bluesky = os.path.join(".", "bluesky")
 
 # Filtrujemy pliki CSV
 pliki_reddit = [f for f in os.listdir(folder_reddit) if f.endswith(".csv") and f.startswith("reddit_")]
-pliki_bluesky = [f for f in os.listdir(folder_bluesky) if f.endswith(".csv") and f.startswith("bluesky_")]
+pliki_bluesky = [f for f in os.listdir(folder_bluesky) if f.endswith(".csv") and f.startswith("przefiltrowany_bluesky")]
 
 suma_reddit = 0
 suma_bluesky = 0
