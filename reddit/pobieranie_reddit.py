@@ -1,14 +1,18 @@
+import os
+
 import praw
 import pandas as pd
 from datetime import datetime, timedelta
 from openpyxl.utils import get_column_letter
 from openpyxl.styles import Font, Alignment, PatternFill
+from dotenv import load_dotenv
+load_dotenv()
 
 # Konfiguracja klienta Reddit API
 reddit = praw.Reddit(
-    client_id="twhA-1yWd6CFHqqBIRyg7A",
-    client_secret="5Yr6ygmmSJJYXYOoGsuJERyk0cgcAQ",
-    user_agent="script:analiza-sondazy-wyborczych:v1.0 (by /ActionVast9655)"
+    client_id=os.getenv("REDDIT_CLIENT_ID"),
+    client_secret=os.getenv("REDDIT_CLIENT_SECRET"),
+    user_agent=os.getenv("REDDIT_USER_AGENT")
 )
 
 # Parametry wyszukiwania

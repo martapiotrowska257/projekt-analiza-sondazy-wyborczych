@@ -4,10 +4,12 @@ from datetime import datetime, timezone
 import os
 import time
 from dateutil.parser import parse  # import parsera do konwersji stringów na datetime
+from dotenv import load_dotenv
+load_dotenv()
 
 # Dane logowania
-USERNAME = "marta.piotrowska.rakowiec@gmail.com"
-APP_PASSWORD = "zo7w-qx45-tq5j-4m2c"
+USERNAME = os.getenv("BLUESKY_USERNAME")
+APP_PASSWORD = os.getenv("BLUESKY_APP_PASSWORD")
 
 # Parametry wyszukiwania
 SEARCH_TERM = "wybory2025"
